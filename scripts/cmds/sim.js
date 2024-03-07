@@ -3,7 +3,7 @@ module.exports = {
 	config: {
 		name: 'bot',
 		version: '1.2',
-		author: 'aminul',
+		author: 'aminulsordar',
 		countDown: 0,
 		role: 0,
 		shortDescription: 'Simsimi ChatBot by Simsimi.fun',
@@ -57,7 +57,7 @@ module.exports = {
 
 async function getMessage(yourMessage, langCode) {
 	try {
-		const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=en&message=+true`);
+		const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=en&message=${yourMessage}&filter=true`);
 		if (!res.data.success) {
 			throw new Error('API returned a non-successful message');
 		}
