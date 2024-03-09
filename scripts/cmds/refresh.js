@@ -6,7 +6,7 @@ module.exports = {
 		countDown: 60,
 		role: 0,
 		shortDescription: {
-			vi: "làm mới thông tin",
+			vi: "làm ới thông tin",
 			en: "refresh information"
 		},
 		longDescription: {
