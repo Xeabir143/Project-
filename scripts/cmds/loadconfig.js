@@ -9,7 +9,7 @@ module.exports = {
 		countDown: 5,
 		role: 2,
 		shortDescription: {
-			vi: "Load lại config",
+			vi: "Load li config",
 			en: "Reload config"
 		},
 		longDescription: {
