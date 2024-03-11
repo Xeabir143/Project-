@@ -13,7 +13,7 @@ module.exports = {
 			en: "Reload config"
 		},
 		longDescription: {
-			vi: "Load lại config của bot",
+			vi: "Load lại onfig của bot",
 			en: "Reload config of bot"
 		},
 		category: "owner",
