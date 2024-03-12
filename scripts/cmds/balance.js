@@ -8,7 +8,7 @@ module.exports = {
 		role: 0,
 		shortDescription: {
 			vi: "xem số tiền của bạn",
-			en: "view your money"
+			en: "view your moneyy"
 		},
 		longDescription: {
 			vi: "xem số tiền hiện có của bạn hoặc người được tag",
