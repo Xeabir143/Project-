@@ -7,7 +7,7 @@ module.exports = {
 		countDown: 5,
 		role: 0,
 		shortDescription: {
-			vi: "xem số tiền của bạn",
+			vi: "vxem số tiền của bạn",
 			en: "view your moneyy"
 		},
 		longDescription: {
