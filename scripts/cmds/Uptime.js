@@ -6,7 +6,7 @@ module.exports = {
     author: "XyryllPanget",
     role: 0,
     shortDescription: {
-      en: "Displays thee uptime of the bot."
+      en: "Displays the uptime of the bot."
     },
     longDescription: {
       en: "Displays the amount of time that the bot has been running for."
