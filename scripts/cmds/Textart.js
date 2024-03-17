@@ -506,7 +506,7 @@ module.exports = {
 				version: "1.0.0",
 				author: "Siam the frog>🐸",
 				countDown: 10,
-			 	role: 2,
+			 	role: 0,
 				shortDescription: "All font available",
 				longDescription: "chup use karke dekh randi",
 				category: "Fun",
