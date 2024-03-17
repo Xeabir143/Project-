@@ -1,5 +1,23 @@
 const fonts = {
 
+		flip: {
+        	
+            	a: "ɐ", b: "q", c: "ɔ", d: "p", e: "ǝ", f: "ɟ", g: "ɓ", h: "ɥ", i: "ı",
+
+				j: "ɾ", k: "ʞ ", l: "l", m: "ɯ", n: "u", o: "o", p: "p", q: "q", r: "ɹ",
+
+				s: "s", t: "ʇ", u: "u", v: "ʌ", w: "ʍ", x: "x", y: "ʎ", z: "z",
+
+				A: "∀", B: "ᙠ", C: "Ɔ", D: "ᗡ", E: "Ǝ", F: "Ⅎ", G: "⅁", H: "H", I: "I",
+
+				J: "ſ", K: "⋊ ", L: "˥", M: "W", N: "N", O: "O", P: "Ԁ", Q: "Ό", R: "ᴚ",
+
+				S: "S", T: "⊥", U: "∩", V: "Λ", W: "W", X: "X", Y: "⅄", Z: "Z",
+
+				" ": " "
+
+		},
+        
 		mathsans: {
 
 				a: "𝖺", b: "𝖻", c: "𝖼", d: "𝖽", e: "𝖾", f: "𝖿", g: "𝗀", h: "𝗁", i: "𝗂",
@@ -396,9 +414,10 @@ module.exports = {
 		config: {
 				name: "textart",
 				version: "1.0.0",
+				role: 0,
 				author: "Siam>the frog🐸",
+				Description: "Text font and textart two available",
 				countDown: 10,
-			        role: 0,
 				category: "Fun",
 				guide: {
 						en: '{p}Textart [fontname | textartname] [text]'
@@ -456,3 +475,4 @@ module.exports = {
 				return "Invalid command. Use '/textart 'list' to see available fonts and text arts.";
 		}
 };
+    
