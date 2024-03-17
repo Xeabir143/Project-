@@ -36,7 +36,7 @@ const fonts = {
 
 		},
         
-        odd: {
+        frog: {
         	
             	a: "🐸a🐸", b: "🐸b🐸", c: "🐸c🐸", d: "🐸d🐸", e: "🐸e🐸", f: "🐸f🐸", g: "🐸g🐸", h: "🐸h🐸", i: "🐸i🐸",
 
@@ -54,19 +54,19 @@ const fonts = {
 
 		},
         
-    	frog: {
+    	odd: {
         	
-            	a: "", b: "", c: "", d: "", e: "", f: "", g: "", h: "", i: "",
+            	a: "☠a☠", b: "☠b☠", c: "☠c☠", d: "☠d☠", e: "☠e☠", f: "☠f☠", g: "☠g☠", h: "☠h☠", i: "☠i☠",
 
-				j: "", k: "", l: "", m: "", n: "", o: "", p: "", q: "", r: "",
+				j: "☠j☠", k: "☠k☠", l: "☠l☠", m: "☠m☠", n: "☠n☠", o: "☠o☠", p: "☠p☠", q: "☠q☠", r: "☠r☠",
 
-				s: "", t: "", u: "", v: "", w: "", x: "", y: "", z: "",
+				s: "☠s☠", t: "☠t☠", u: "☠u☠", v: "☠v☠", w: "☠w☠", x: "☠x☠", y: "☠y☠", z: "☠z☠",
 
-				A: "", B: "", C: "", D: "", E: "", F: "", G: "", H: "", I: "",
+				A: "☠A☠", B: "☠B☠", C: "☠C☠", D: "☠D☠", E: "☠E☠", F: "☠F☠", G: "☠G☠", H: "☠H☠", I: "☠I☠",
 
-				J: "", K: " ", L: "", M: "", N: "", O: "", P: "", Q: "", R: "",
+				J: "☠J☠", K: "☠K☠", L: "☠L☠", M: "☠M☠", N: "☠N☠", O: "☠O☠", P: "☠P☠", Q: "☠Q☠", R: "☠R☠",
 
-				S: "", T: "", U: "", V: "", W: "", X: "", Y: "", Z: "",
+				S: "☠S☠", T: "☠T☠", U: "☠U☠", V: "☠V☠", W: "☠W☠", X: "☠X☠", Y: "☠Y☠", Z: "☠Z☠",
 
 				" ": " "
 
@@ -516,8 +516,8 @@ module.exports = {
 
 				if (textArts[fontOrArt]) {
 						const selectedArt = textArts[fontOrArt];
-						const artMessage = `Here's the "${fontOrArt}" text art:\n\n${selectedArt}\n\nYou can copy the ${fontOrArt} art and paste it into [https://pastebin.com/] to see it more clearly🐸.`;
-						const pastebinLink = `https://pastebin.com/`;
+						const artMessage = `Here's the "${fontOrArt}" text art:\n\n${selectedArt}\n\nYou can copy the ${fontOrArt} art and paste it into [https://www.programiz.com/c-programming/online-compiler/] to see it more clearly🐸.`;
+						const ccode = `https://www.programiz.com/c-programming/online-compiler/`;
 
 						if (selectedArt.length > 100000) {
 								return api.sendMessage(`The "${fontOrArt}" text art or ASCII art is too long. You can paste it to ${pastebinLink} to see it more clearly.`, event.threadID);
@@ -529,4 +529,4 @@ module.exports = {
 				return "Invalid command. Use '/textart 'list' to see available fonts and text arts.";
 		}
 };
-    
+ 
