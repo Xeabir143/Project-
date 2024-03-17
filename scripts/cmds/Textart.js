@@ -396,10 +396,9 @@ module.exports = {
 		config: {
 				name: "textart",
 				version: "1.0.0",
-				role: 0,
 				author: "Siam>the frog🐸",
-				Description: "Text font and textart two available",
 				countDown: 10,
+			        role: 0,
 				category: "Fun",
 				guide: {
 						en: '{p}Textart [fontname | textartname] [text]'
@@ -424,11 +423,11 @@ module.exports = {
 				if (command === "list") {
 						let message = "List of available arts🐸:\n\n";
 						for (const name in textArts) {
-								message += `   ⦿ ${name}\n`;
+								message += `   🐸 ${name}\n`;
 						}
 						message += "\nList of available fonts🐸:\n\n";
 						for (const name in fonts) {
-								message += `   ⦿ ${name}\n`;
+								message += `   🐸 ${name}\n`;
 						}
 						return api.sendMessage(message, event.threadID, event.messageID);
 				}
