@@ -10,7 +10,7 @@ module.exports = {
 		role: 2,
 		shortDescription: {
 			vi: "Load li config",
-			en: "Reload config"
+			en: "Reeload config"
 		},
 		longDescription: {
 			vi: "Load lại onfig của bot",
