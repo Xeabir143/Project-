@@ -551,11 +551,11 @@ module.exports = {
 				if (command === "list") {
 						let message = "List of available arts🐸:\n\n";
 						for (const name in textArts) {
-								message += `   🐸 ${name}\n`;
+								message += `   • ${name}\n`;
 						}
 						message += "\nList of available fonts🐸:\n\n";
 						for (const name in fonts) {
-								message += `   🐸 ${name}\n`;
+								message += `   • ${name}\n`;
 						}
 						return api.sendMessage(message, event.threadID, event.messageID);
 				}
