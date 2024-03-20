@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = {
   config: {
     name: 'cgpt',
-    version: '1.0.0',
+    version: '1.0.69',
     author: 'Siam the frog>🐸',
     countDown: 0,
     role: 0,
