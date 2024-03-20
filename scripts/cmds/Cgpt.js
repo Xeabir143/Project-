@@ -9,7 +9,7 @@ module.exports = {
     role: 0,
     category: 'Ai',
     shortDescription: 'ask any question', 
-    longDescription: 'This is a different model of chat gpt',
+    longDescription: 'This is a different model of chat gpt-4 and gpt-3.5',
     guide: {
       en: '{pn} question',
     },
