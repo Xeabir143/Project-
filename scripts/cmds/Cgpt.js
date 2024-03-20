@@ -11,7 +11,7 @@ module.exports = {
     shortDescription: 'ask any question', 
     longDescription: 'This is a different model of chat gpt',
     guide: {
-      en: '{pn}chatgpt question',
+      en: '{pn} question',
     },
   },
 
