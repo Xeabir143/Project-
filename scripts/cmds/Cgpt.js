@@ -5,7 +5,7 @@ module.exports = {
     name: 'cgpt',
     version: '1.0.0',
     author: 'Siam the frog>🐸',
-    countDown: 10,
+    countDown: 0,
     role: 0,
     category: 'Ai',
     shortDescription: 'ask any question', 
