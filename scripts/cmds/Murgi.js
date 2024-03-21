@@ -3,14 +3,14 @@ module.exports = {
 		name: "murgi",
     aliases: ["Murgi"],
 		version: "1.0",
-		author: "Siam🐸",
+		author: "Siam the frog>🐸",
 		role: 2,
-		category: "funny",
+		category: "flirt",
     shortDescription: "flirt murgi jatio randi",
 		longDescription: "",
 		guide: {
 			vi: "not Available",
-			en: "{p} chik"
+			en: "{p} murgi"
 		} 
 	},
 
