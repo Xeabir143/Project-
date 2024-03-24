@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = {
   config: {
-    name: 'niji another model',
+    name: 'niji another modeel',
     version: '1.0',
     author: 'Siam',
     countDown: 0,
