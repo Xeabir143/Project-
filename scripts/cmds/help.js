@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[Siam islam]";
+const doNotDelete = "[THE FOX BOX]";
 /** 
 * @author ĊŸBËŖ ​​ÄŖMŸ
 * @author: do not delete it
