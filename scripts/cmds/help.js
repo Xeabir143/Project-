@@ -7,7 +7,7 @@ const doNotDelete = "[ 🐐 | GoatBot V2 ]"; // changing this wont change the go
 
 module.exports = {
   config: {
-    name: "help2",
+    name: "help",
     version: "1.17",
     author: "aminulsordar", // original author Kshitiz 
     countDown: 5,
