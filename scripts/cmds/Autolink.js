@@ -27,11 +27,11 @@ module.exports = {
   threadStates: {},
   config: {
     name: 'autolink',
-    version: '2.0',
+    version: '3.0',
     author: 'Vex_Kshitiz',
     countDown: 5,
     role: 0,
-    shortDescription: 'Auto video downloader for Instagram, Facebook, TikTok, and Twitter',
+    shortDescription: 'Auto video downloader for Instagram, Facebook, TikTok, Twitter, pinterest and youtube',
     longDescription: '',
     category: 'media',
     guide: {
@@ -71,7 +71,7 @@ module.exports = {
       } else {
         api.sendMessage("", event.threadID, event.messageID);
       }
-      api.setMessageReaction("💐", event.messageID, (err) => {}, true);
+      api.setMessageReaction("🕐", event.messageID, (err) => {}, true);
     }
   },
   downLoad: function (url, api, event) {
@@ -88,9 +88,10 @@ module.exports = {
       this.downloadTwitter(url, api, event, path);
     } else if (url.includes("pin.it")) {
       this.downloadPinterest(url, api, event, path);
+    } else if (url.includes("youtu")) {
+      this.downloadYouTube(url, api, event, path);
     }
   },
-
   downloadInstagram: async function (url, api, event, path) {
     try {
       const res = await this.getLink(url, api, event, path);
@@ -171,7 +172,7 @@ module.exports = {
   },
   downloadTwitter: async function (url, api, event, path) {
     try {
-      const res = await axios.get(`https://xdl-tjqe.onrender.com/kshitiz?url=${encodeURIComponent(url)}`);
+      const res = await axios.get(`https://xdl-twitter.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
       const videoUrl = res.data.url;
 
       const response = await axios({
@@ -200,8 +201,37 @@ module.exports = {
   },
   downloadPinterest: async function (url, api, event, path) {
     try {
-      const res = await axios.get(`https://pindl.onrender.com/kshitiz?url=${encodeURIComponent(url)}`);
+      const res = await axios.get(`https://pindl-pinterest.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
       const videoUrl = res.data.url;
+
+      const response = await axios({
+        method: "GET",
+        url: videoUrl,
+        responseType: "stream"
+      });
+
+      if (response.headers['content-length'] > 87031808) {
+        return api.sendMessage("The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
+      }
+
+      response.data.pipe(fs.createWriteStream(path));
+      response.data.on('end', async () => {
+        const shortUrl = await shortenURL(videoUrl);
+        const messageBody = `✅🔗 Download Url: ${shortUrl}`;
+
+        api.sendMessage({
+          body: messageBody,
+          attachment: fs.createReadStream(path)
+        }, event.threadID, () => fs.unlinkSync(path), event.messageID);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  },
+  downloadYouTube: async function (url, api, event, path) {
+    try {
+      const res = await axios.get(`https://yt-downloader-eta.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
+      const videoUrl = res.data['480p'];
 
       const response = await axios({
         method: "GET",
@@ -233,7 +263,7 @@ module.exports = {
       if (url.includes("instagram")) {
         axios({
           method: "GET",
-          url: `https://instadl.onrender.com/insta?url=${encodeURIComponent(url)}`
+          url: `https://insta-downloader-ten.vercel.app/insta?url=${encodeURIComponent(url)}`
         })
         .then(res => {
           console.log(`API Response: ${JSON.stringify(res.data)}`);
@@ -320,7 +350,8 @@ module.exports = {
         url.includes("fb.watch") ||
         url.includes("tiktok") ||
         url.includes("x.com") ||
-        url.includes("pin.it")
+        url.includes("pin.it") ||
+        url.includes("youtu")
       ) {
         return {
           url: url
